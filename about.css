@@ -1,0 +1,523 @@
+*{
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+body{
+    background-image: url(back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size: cover;
+   height:fit-content;
+   overflow-x: hidden;
+   
+}
+header{
+    position: relative;
+    max-width: device-width;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+.ScrollTop{
+    position: fixed;
+    bottom: 800px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #fff url(arrow.png);
+    border-radius: 50%;
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.ScrollTop.active{
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+}
+
+header img{
+    background: transparent;
+    height: 80px;
+    width: 200px;
+    border-radius: 40px;
+    border-top-left-radius: 20px;
+    float: left;
+    transition: 3s;
+}
+nav{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+.about-us h1{
+    text-align: center;
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 0;
+}
+.about-us h4{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: -20px;
+    font-weight: 600;
+    color: white;
+    line-height: 10px;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav ul li{
+    list-style: none;
+    
+}
+nav ul li a{
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    background:rgba(73, 72, 72, 0.8) ;
+    transition: 5s;
+}
+nav ul li a.active,
+nav ul li a:hover{
+   border-bottom: 3px solid white;
+   border-radius: 20px;
+   transition: 0.5s;
+}
+/* About Us CSS Start*/
+.about{
+    padding: 10px;
+    text-align: center;
+    background:rgba(73, 72, 72, 0.5) ;
+}
+.about .container{
+    width: device-width;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.about h1{
+    font-size: 60px;
+    color: white;
+    font-family: sans-serif;
+}
+.text{
+    color: white;
+    font-size: 20px;
+    font-family: serif;
+    margin: 20px;
+}
+.about .container .aboutBx {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    display: block;
+    margin-top: 350px;
+    margin-left: 12%;
+    margin-right: 0px;
+    position:relative;
+    width: 200px;
+    height: 350px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.flip-card{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    margin-left: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+.flip-card .front,
+.flip-card .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background:rgba(73, 72, 72, 0.9) ;
+    border: 2px solid aqua;
+    backface-visibility: hidden;
+    border-radius: 0 20px 0 20px;
+
+}
+.flip-card .back{
+    transform: rotateX(180deg);
+    background:rgba(73, 72, 72, 1.5) ;
+}
+label:hover .flip-card{
+    transform: rotateX(15deg);
+    box-shadow: 5px 8px aqua;
+
+}
+input{
+    display: none;
+}
+:checked + .flip-card{
+    transform: rotateX(180deg);
+}
+label:hover :checked + .flip-card{
+    transform: rotateX(175deg);
+    box-shadow: 5px 10px aqua;
+
+}
+.front img{
+    width: 150px;
+    margin: 30px 0 20px 0;
+    border-radius: 50%;
+}
+.front h1{
+    font-size: 30px;
+    color:whitesmoke;
+    font-family: cursive;
+    text-shadow: 1px 1px aqua;
+    margin: 0;
+}
+.front h2{
+    font-size: 20px;
+    color:rgb(219, 213, 213);
+    margin: 12px 0 12px 0;
+
+}
+.front p{
+    color: aqua;
+    margin: 0px;
+    padding-bottom: 5px;
+    font-family: monospace;
+}
+.back .click{
+    color: aqua;
+    margin: 0px;
+    padding-bottom: 5px;
+    font-family: monospace;
+}
+.back h1{
+    color: whitesmoke;
+    font-size: 30px;
+    margin: 30px 0 0 0;
+    text-shadow: 1px 1px aqua;
+
+}
+.last-hr{
+    height: 4px;
+    background: white;
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    animation-duration: 3s;
+}
+.back p{
+    font-size: 15px;
+    color: honeydew;
+    padding: 0 18px;
+    line-height: 20px;
+    text-align: center;
+    margin: auto;
+}
+.wrapper form input{
+    display: inline-flex;
+}
+/*About Us Css Finished*/
+
+.footer{
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+    display: block;
+    background: rgb(54, 54, 56);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.footer .footlogo{
+    position: relative;
+    text-align: center;
+    width: 500px;
+    float: left;
+    justify-content: center;
+}
+.footer .quick-links{
+   margin-left: 40%;
+   padding-top: 30px;
+}
+
+.footer .documents{
+    position: relative;
+    float: right;
+    padding-top: 0rem;
+}
+
+footer{
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color:rgb(27, 78, 78,0.9);
+    border-top: 1px solid white;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+    animation-duration: 3s;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 40%;
+    border-radius: 10px;
+}
+
+.footer-distributed h5 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	font-family: sans-serif;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+	
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+    animation-duration: 2s;
+}
+.footer-center span{
+    display: block;
+	color:  #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+    animation-duration: 3s;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+/* Animations*/
+.about-box1{
+    animation-duration: 1.5s;
+    
+}
+.about-box2{
+    animation-duration: 1.7s;
+}
+.about-box3{
+    animation-duration: 1.5s;
+}
+.heading{
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+}
+.text{
+    animation-name: blur;
+    animation-delay: 2s;
+    animation-duration: 1.5s;
+}
+@keyframes blur {
+    100%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    30%{
+        opacity: 0.4;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    0%{
+        opacity: 0;
+    }
+
+}
+.blog{
+    line-height: 10px;
+}
+.blogP{
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+

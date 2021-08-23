@@ -1,0 +1,175 @@
+.our-services h1{
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 0;
+}
+.our-services h4{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: -20px;
+    font-weight: 600;
+    color: white;
+    line-height: 20px;
+}
+.services{
+    margin: 30px;
+    background: rgba(72,73, 73, 0.6);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.web-design{
+    margin: 20px;
+}
+.web-design span p{
+    text-align: justify;
+    padding: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 17px;
+    margin-left: 20px;
+    animation-duration: 2s;
+  
+}
+.web-design h2{
+    color: white;
+    font-size: 35px;
+    padding: 20px;
+    padding-top: 5px;
+    font-weight: bolder;
+    animation-duration: 2s;
+}
+
+.web-design img{
+    width: 250px;
+    padding-left: 20px;
+    padding-top: 15px;
+    border-radius: 15px;
+    float: left;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    animation-duration: 2s;
+}
+
+.graphic-design{
+    padding-top: 25px;
+    margin: 10px;
+    
+}
+.graphic-design h2{
+    color: white;
+    font-size: 35px;
+    padding-top: 10px;
+    padding-right: 30px;
+    text-align: right;
+    font-weight: bolder;
+    animation-duration: 2s;
+  
+}
+.graphic-design img{
+    width: 250px;
+    padding-right: 25px;
+    padding-top: 15px;
+    border-radius: 15px;
+    float: right;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    animation-duration: 2s;
+}
+.graphic-design span p{
+    text-align: justify;
+    padding: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 17px;
+    margin-left: 20px;
+    animation-duration: 2s;
+   
+}
+
+
+.content-writting{
+    margin-bottom: 25px;
+    padding-top: 20px;
+    margin-left: 15px;
+   
+}
+.content-writting span p{
+    text-align: justify;
+    padding: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 17px;
+    margin-left: 20px;
+    margin-right: 10px;
+    animation-duration: 2s;
+}
+.content-writting h2{
+    color: white;
+    font-size: 35px;
+    padding: 20px;
+    padding-top: 5px;
+    font-weight: bolder;
+    animation-duration: 2s;
+
+}
+.content-writting img{
+    width: 250px;
+    height: 160px;
+    padding-left: 20px;
+    border-radius: 15px;
+    float: left;
+    padding-bottom: 35px;
+    padding-right: 15px;
+    animation-duration: 2s;
+}
+
+.ScrollTop{
+    position: fixed;
+    bottom: 800px;
+    right: 26px;
+    width: 35px;
+    height: 40px;
+    background: #fff url(arrow.png);
+    border-radius: 50%;
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.ScrollTop.active{
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+}
+@media screen and (max-width:320px){
+    .our-services h1{
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        margin-bottom: 0;
+    }
+    .our-services h4{
+        text-align: center;
+        margin: auto 0;
+        font-size: 30px;
+        color: white;
+        margin-bottom: 0;
+        font-weight: 600;
+        color: white;
+        line-height: 20px;
+    }
+    .services{
+        margin: 20px;
+        background: rgba(72,73, 73, 0.6);
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+}
